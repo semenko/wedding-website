@@ -2,7 +2,7 @@
 title: "Activities"
 bg: purple
 color: white
-fa-icon: cloud-upload
+fa-icon: bicycle
 ---
 
 ## Updating
