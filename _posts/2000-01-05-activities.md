@@ -7,8 +7,9 @@ fa-icon: bicycle
 
 ### *Got some downtime?*
 
+#### Cool stuff coming soon. Until then, check out StL:
 
-
+<!---
 ## Active
 
 stuff to do
@@ -20,6 +21,7 @@ stuff to do
 ## Chill
 
 stuff to do
+--->
 
-
-<div class="icontain"><iframe src="//www.youtube.com/embed/ledwkZojE4c" allowfullscreen></iframe></div>
+<!--- Other video: ledwkZojE4c  --->
+<div class="icontain"><iframe src="//www.youtube.com/embed/VkE-V2eKVbk" allowfullscreen></iframe></div>
