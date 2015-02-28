@@ -7,18 +7,19 @@ s3_bucket: wedding.semenkovich.com
 
 # site: path-to-your-website
 
-# max_age:
-#   "assets/*": 6000
-#   "*": 300
+max_age:
+  "assets/*": 2592000  # 1 month
+  "*": 604800  # 1 week
 
-# gzip:
-#   - .html
-#   - .css
-#   - .md
-# gzip_zopfli: true
+
+gzip: true
+#	- .html
+#	- .css
+#	- .md
+
 
 # See http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region for valid endpoints
-# s3_endpoint: ap-northeast-1
+s3_endpoint: us-east-1
 
 # ignore_on_server: that_folder_of_stuff_i_dont_keep_locally
 
@@ -26,8 +27,10 @@ s3_bucket: wedding.semenkovich.com
 #   - those_folders_of_stuff
 #   - i_wouldnt_want_to_upload
 
-# s3_reduced_redundancy: true
+s3_reduced_redundancy: false
 
+
+## We don't provide CloudFront bits to this IAM credential
 # cloudfront_distribution_id: your-dist-id
 
 # cloudfront_distribution_config:
