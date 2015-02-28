@@ -5,9 +5,11 @@ color: white
 fa-icon: bicycle
 ---
 
-### *Got some downtime?*
+## *Got some downtime?*
 
-#### Cool stuff coming soon. Until then, check out StL:
+### There's tons to do in the StL!
+
+#### Suggestions coming soon -- until then, check out this video:
 
 <!---
 ## Active
