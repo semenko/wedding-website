@@ -8,7 +8,8 @@ s3_bucket: wedding.semenkovich.com
 # site: path-to-your-website
 
 max_age:
-  "assets/*": 2592000  # 1 month
+  "index.html": 86400
+  "img/*": 2592000  # 1 month
   "*": 604800  # 1 week
 
 
