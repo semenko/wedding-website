@@ -39,23 +39,40 @@ for idx, row in enumerate(csvInput):
 	if skipFirstLine and idx == 0:
 		continue
 
-	# Sanity check
-	sys.stdout.write('Running.\n')
-	sys.stdout.flush()
-
 	try:
 		name = row[0]
 		print(name)
+		address1 = row[1].strip().upper()
 		city, stateandzip = row[2].split(',', 1)
+		city = city.strip().upper()
 		state, postcode = stateandzip.rsplit(' ', 1)
+		state = state.strip().upper()
+		postcode = postcode.strip()
 		verifiedAddress = lob.Verification.create(
-			address_line1 = row[1],
+			address_line1 = address1,
 			address_line2 = '',
 			address_city = city,
 			address_state = state,
 			address_zip = postcode,
 			address_country = country
 		)
+		if address1 != verifiedAddress.address.address_line1:
+			print('\taddress_1 changed')
+			print('\t\t', address1)
+			print('\t\t', verifiedAddress.address.address_line1)
+		if city != verifiedAddress.address.address_city:
+			print('\tcity changed')
+			print('\t\t', city)
+			print('\t\t', verifiedAddress.address.address_city)
+		if state != verifiedAddress.address.address_state:
+			print('\tstate changed')
+			print('\t\t', state)
+			print('\t\t', verifiedAddress.address.address_state)
+		if postcode != verifiedAddress.address.address_zip[0:5]:
+			print('\tzip changed')
+			print('\t\t', postcode)
+			print('\t\t', verifiedAddress.address.address_zip[0:5])
+		print('*********')
 		# print(verifiedAddress)
 	except Exception, e:
 		outputRow = ",".join(row) + "," + str(e)+ "\n"
