@@ -68,10 +68,10 @@ for idx, row in enumerate(csvInput):
 			print('\tstate changed')
 			print('\t\t', state)
 			print('\t\t', verifiedAddress.address.address_state)
-		if postcode != verifiedAddress.address.address_zip[0:5]:
+		if postcode[0:5] != verifiedAddress.address.address_zip[0:5]:
 			print('\tzip changed')
 			print('\t\t', postcode)
-			print('\t\t', verifiedAddress.address.address_zip[0:5])
+			print('\t\t', verifiedAddress.address.address_zip)
 		print('*********')
 		# print(verifiedAddress)
 	except Exception, e:
